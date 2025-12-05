@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript statements</title>
+</head>
+<body>
+    <h2>JavaScript statements</h2>
+    <p>A <b>JavaScript program</b> is a list of <b>statements</b> to exeute</p>
+    <h2>Opeartors</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        <!-- Addition -->
+        //* use +,-,*,/ operators to perform arithmetic operations *//
+        var a = 5;
+        var b = 10;
+        var z = a + b;
+        var x = a - b;
+        var c = a * b;
+        var d = b / a;  
+        var m = b % a;
+        document.getElementById("demo").innerHTML = "Addition: " + z;
+        document.getElementById("demo1").innerHTML = "Subtraction: " + x;
+        document.getElementById("demo2").innerHTML = "Multiplication: " + c;
+        document.getElementById("demo3").innerHTML = "Division: " + d;
+        document.getElementById("demo4").innerHTML = "Modulus: " + m;
+
+        // assignment operators//
+        a += 5; 
+        document.getElementById("demo5").innerHTML = "a after a += 5: " + a;
+    </script>
+</body>
+</html>
