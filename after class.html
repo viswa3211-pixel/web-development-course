@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>simple calcuter</h1>
+    <p>perfrom all operator using javascprit</p>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>
+    <p id="mod"></p>
+    <p id="inc"></p>
+    <p id="dec"></p>
+    <script>
+        var a=10;
+        var b=5;
+        document.getElementById("add").innerHTML="addition:"+(a+b);
+        document.getElementById("sub").innerHTML="subtraction:"+(a-b);
+        document.getElementById("mul").innerHTML="multiplication:"+(a*b);
+        document.getElementById("div").innerHTML="division:"+(a/b);
+        document.getElementById("mod").innerHTML="modulus:"+(a%b);
+        document.getElementById("inc").innerHTML="increment:"+(++a);
+        document.getElementById("dec").innerHTML="decrement:"+(--b);
+    </script>
+</body>
+</html>
