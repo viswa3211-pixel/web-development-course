@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Methods, Loops & Switches</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f4f8;
+      padding: 20px;
+    }
+    .box {
+      background: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #0d6efd;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #084298;
+    }
+    p {
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>  <h1>JavaScript: Methods, Loops & Switch</h1>  <!-- Methods Section -->  <div class="box">
+    <h2>Introduction to Methods</h2>
+    <p id="date"></p>
+    <p id="rounded"></p>
+    <button onclick="showMethods()">Show Methods Output</button>
+  </div>  <!-- Loops Section -->  <div class="box">
+    <h2>Loops (Random Numbers)</h2>
+    <p id="randomNumbers"></p>
+    <button onclick="printRandomNumbers()">Generate Numbers</button>
+  </div>  <!-- Switch Section -->  <div class="box">
+    <h2>Switch Statement</h2>
+    <p id="day"></p>
+    <button onclick="showDay()">Show Today</button>
+  </div>  <script>
+    // Method Example
+    function showMethods() {
+      let today = new Date(); // Inbuilt Date method
+      document.getElementById("date").innerHTML = "Current Date: " + today.toDateString();
+
+      let randomNumber = Math.random() * 100; // Inbuilt Math method
+      let roundedNumber = Math.round(randomNumber);
+      document.getElementById("rounded").innerHTML = "Rounded Random Number: " + roundedNumber;
+    }
+
+    // Loop Example
+    function printRandomNumbers() {
+      let output = "";
+      for (let i = 1; i <= 5; i++) {
+        output += Math.floor(Math.random() * 50) + " ";
+      }
+      document.getElementById("randomNumbers").innerHTML = "Random Numbers: " + output;
+    }
+
+    // Switch Example
+    function showDay() {
+      let dayNumber = new Date().getDay();
+      let dayName;
+
+      switch (dayNumber) {
+        case 0:
+          dayName = "Sunday";
+          break;
+        case 1:
+          dayName = "Monday";
+          break;
+        case 2:
+          dayName = "Tuesday";
+          break;
+        case 3:
+          dayName = "Wednesday";
+          break;
+        case 4:
+          dayName = "Thursday";
+          break;
+        case 5:
+          dayName = "Friday";
+          break;
+        case 6:
+          dayName = "Saturday";
+          break;
+        default:
+          dayName = "Unknown Day";
+      }
+
+      document.getElementById("day").innerHTML = "Today is: " + dayName;
+    }
+  </script></body>
+</html>
