@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometric Values</title>
+</head>
+<body>
+    <h2>JavaScript Trigonometric Values</h2>
+    <p>The Math object in JavaScript provides methods to calculate trigonometric values. Here are some commonly used trigonometric methods:</p>
+    <script>
+        var angleInDegrees = 45;
+        var angleInRadians = angleInDegrees * (Math.PI / 180); // Convert degrees to radians
+
+        document.write("The sine of " + angleInDegrees + " degrees is: " + Math.sin(angleInRadians) + "<br>");
+        document.write("The cosine of " + angleInDegrees + " degrees is: " + Math.cos(angleInRadians) + "<br>");
+        document.write("The tangent of " + angleInDegrees + " degrees is: " + Math.tan(angleInRadians) + "<br>");
+
+        var angle2InDegrees = 30;
+        var angle2InRadians = angle2InDegrees * (Math.PI / 180); // Convert degrees to radians
+
+        document.write("The sine of " + angle2InDegrees + " degrees is: " + Math.sin(angle2InRadians) + "<br>");
+        document.write("The cosine of " + angle2InDegrees + " degrees is: " + Math.cos(angle2InRadians) + "<br>");
+        document.write("The tangent of " + angle2InDegrees + " degrees is: " + Math.tan(angle2InRadians) + "<br>");
+    </script>
+    <h3>Sum of Arguments and Trigonometry Values</h3>
+    <p id="trigo"></p>
+    <script>
+        // Function to print trigonometry values
+        function trigonometryValues(degree = 0) {
+            let radian = degree * (Math.PI / 180);
+
+            let sinValue = Math.sin(radian).toFixed(2);
+            let cosValue = Math.cos(radian).toFixed(2);
+            let tanValue = Math.tan(radian).toFixed(2);
+
+            return `
+                Trigonometry Values for ${degree}° <br>
+                Sin: ${sinValue} <br>
+                Cos: ${cosValue} <br>
+                Tan: ${tanValue}
+            `;
+        }
+
+        document.getElementById("trigo").innerHTML =
+            trigonometryValues(45);
+    </script>
+
+</body>
+</html>
