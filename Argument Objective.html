@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aruguments object</title>
+</head>
+<body>
+    <h2>Arguments Object</h2>
+    <p>The arguments object is a local variable available within all non-arrow functions. It contains
+    an array-like collection of all the arguments passed to the function.</p>
+    <p id="demo"></p>
+    <script>
+        function findmax()
+        {
+            var max = 0;
+            for(i =0; i < arguments.length; i++)
+        {
+            if(arguments[i]>max){
+                max=arguments[i];
+            }
+
+        }
+        return max;
+        }
+        document.getElementById("demo").innerHTML = findmax(4,5,6,7,8,9,10);
+        </script>
+</body>
+</html>
