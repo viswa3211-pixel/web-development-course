@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript object properties</title>
+</head>
+<body>
+    <h2>JavaScript Object prperties</h2> 
+    <p>In JavaScript, objects are collections of key-value pairs. Each key is a string (or symbol) that maps to a value, which can be of any data type, including other objects or functions.</p>   
+    <h3>Creating an Object</h3>
+    <p >Objects can be created using object literals or the Object constructor.</p>
+    <p id="demo"></p>
+    <script>
+        var person = {
+            firstName: "Hasmitha",
+            lastName: "Vaishanvi",
+            age: 14,
+            eyeColor: "black"
+        };
+        document.getElementById("demo").innerHTML = "First Name: " + person.firstName + "<br>" +
+            "Last Name: " + person.lastName + "<br>" +
+            "Age: " + person.age + "<br>" +
+            "Eye Color: " + person.eyeColor;
+    </script> 
+</body>
+</html>
