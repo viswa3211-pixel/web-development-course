@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array and Object</title>
+</head>
+<body>
+
+<h2>Array and Object Example</h2>
+
+<script>
+    // Object creation
+    let student = {
+        name: "Hasmitha",
+        age: 14,
+        class: 9
+    };
+
+    // Display object values using keys
+    document.write("Name: " + student.name + "<br>");
+    document.write("Age: " + student.age + "<br>");
+    document.write("Class: " + student.class + "<br><br>");
+
+    // Array creation
+    let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    // Display array values using index
+    document.write("First Fruit: " + fruits[3] + "<br>");
+    document.write("Second Fruit: " + fruits[1] + "<br><br>");
+
+    // join() method
+    document.write("All Fruits: " + fruits.join(", ") + "<br>");
+
+    // pop() method
+    fruits.pop();
+    document.write("After pop(): " + fruits.join("* "));
+</script>
+
+</body>
+</html>
