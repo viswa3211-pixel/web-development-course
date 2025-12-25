@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callstack in Javavscrpit</title>
+</head>
+<body>
+    <h1>Callstack in Javavscrpit</h1>
+    <p>The call stack is a mechanism for an interpreter (like the JavaScript interpreter) to keep track of its place in a script that calls multiple functions — what function is currently being run and what functions are called from within that function, etc.</p>
+    <p>do the calculation then disply the result</p>
+    <p id="demo"></p>
+    <script>
+        function add(x, y) {
+            return x + y;
+        }
+        function average(x, y) {
+            return add(x, y) / 2;
+        }
+    let result = average(10, 20);
+    document.getElementById("demo").innerHTML = "The average is: " + result;
+    </script>
+</body>
+</html>
