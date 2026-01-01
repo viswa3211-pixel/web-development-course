@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate random numbers using a while loop</title>
+</head>
+<body>
+    <h1>JavaScript While Loops</h1>
+    <h2>Generate Random Numbers Using a While Loop</h2>
+    <p id="number"></p>
+    <script>
+        var text = "";
+        var i = 0;
+        while (i < 10) {
+            var randomNum = Math.floor(Math.random() * 100) + 1; // Generate random number between 1 and 100
+            text += randomNum + "<br>";
+            i++;
+        }
+    </script>
+</body>
+</html>
