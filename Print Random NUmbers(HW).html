@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Random Numbers</title>
+</head>
+<body>
+    <h2>JavaScript Random Numbers</h2>
+    <h2>Print  Random Numbers</h2>
+    <p id="result"></p>
+    <script>
+        var i; //i is Undefined
+        var text = "";
+        {
+            let i = 0; //assigning a vlue for i only within the block
+            while (i < 10) {
+                text += "The Value inside the block: " + i + "<br />";
+                i++;
+            }
+        document.getElementById("result").innerHTML = text;
+        }
+        document.write("The value outside the block: " + i); //i is still Undefined
+    </script>
+</body>
+</html>
