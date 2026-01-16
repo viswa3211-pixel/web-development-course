@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle errors in JS</title>
+</head>
+<body>
+    <h1>Handling Errors in JavaScript</h1>
+    <p>In JavaScript, errors can occur for various reasons, such as syntax errors, runtime errors, or logical errors. To handle these errors gracefully, we can use the <code>try...catch</code> statement.</p> 
+    <p id="result"></p>
+    <script>
+        product = (a,b) => a*b;
+        try {
+            document.getElementById("result").innerHTML = a;
+            // If the function is involed here the result will be displayed
+            //If any variable is given the error messages will be displayed
+        }
+        catch(err) {
+            document.getElementById("result").innerHTML = "Error: " + err.message;
+        }
+    </script>
+</body>
+</html>
