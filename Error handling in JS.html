@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handling in JS</title>
+</head>
+<body>
+    <h2>Error Handling in JavaScript</h2>
+    <p>Error handling in JavaScript is primarily done using the <code>try...catch
+    <p id="Error_message"></p>
+    <script>
+        try {
+            addalert("Welcome guest!"); 
+        }
+        catch(err) {
+            document.getElementById("Error_message").innerHTML = "err message: " + err.message;          
+        }
+    </script>
+</body>
+</html>
