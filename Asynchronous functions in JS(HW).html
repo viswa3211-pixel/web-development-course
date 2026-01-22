@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous functions in JS</title>
+</head>
+<body>
+    <h1>Asynchronous functions in JavaScript</h1>
+    <p>This is a simple example of an asynchronous function using Promises and async/await syntax.</p>
+    <h1 id="result"></h1>
+    <script>
+        async function product(a, b) {
+            let response = await a * b;
+            display(response);
+        }
+        function display(some) {
+            document.getElementById("result").innerHTML = some;
+        }
+        product(5, 6);
+    </script>
+</body>
+</html>
