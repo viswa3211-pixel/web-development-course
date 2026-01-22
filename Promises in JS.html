@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in JS</title>
+</head>
+<body>
+    <h1>Promises in JavaScript</h1>
+    <p id="demo"></p>
+    <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+        let myPromise = new Promise(function(myResolve, myReject) {
+            //produce code may take some time
+            let x = 0; //some code (try to change x to 5)
+            if (x == 0) {
+                myResolve("OK");
+            } else {
+                myReject("Error");
+            }
+        });
+        //consuming the code must wait for a fulfilled promise
+        myPromise.then(
+            function(value) { myDisplayer(value); }, //code is sucessful
+            function(error) { myDisplayer(error); } //code is error
+        );
+    </script>
+</body>
+</html>
