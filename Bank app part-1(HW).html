@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Bank App</title>
+    <link rel="stylesheet" href="Bank app part-1(HW).css">
+</head>
+<body>
+
+<div class="bank-app">
+    <h1>Bank App</h1>
+
+    <div class="balance-box">
+        <h2>Total Balance</h2>
+        <p id="balance">₹ 0</p>
+    </div>
+
+    <div class="input-box">
+        <label>Enter Amount</label>
+        <input type="number" id="amount" placeholder="Enter money">
+    </div>
+
+    <div class="buttons">
+        <button class="credit" onclick="credit()">Credit</button>
+        <button class="debit" onclick="debit()">Debit</button>
+    </div>
+</div>
+
+<script>
+    let totalBalance = 0;
+
+    function credit() {
+        let amount = Number(document.getElementById("amount").value);
+        totalBalance += amount;
+        document.getElementById("balance").innerText = "₹ " + totalBalance;
+        document.getElementById("amount").value = "";
+    }
+
+    function debit() {
+        let amount = Number(document.getElementById("amount").value);
+        totalBalance -= amount;
+        document.getElementById("balance").innerText = "₹ " + totalBalance;
+        document.getElementById("amount").value = "";
+    }
+</script>
+
+</body>
+</html>
