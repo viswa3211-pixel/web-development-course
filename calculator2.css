@@ -51,3 +51,40 @@ body {
 .empty:focus {
     outline: none;
 }
+#result {
+    height: 120px;
+}
+#history {
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #919191;
+}
+#output { 
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px; 
+}
+button:nth-child(4) {
+    font-size: 20px;
+    background-color: #6de6df;
+}
+button:nth-child(8) {
+    font-size: 20px;
+    background-color: #6ce280;
+}
+button:nth-child(12) {
+    font-size: 20px;
+    background-color: rgb(216, 112, 185);
+}
+button:nth-child(16) {
+    font-size: 20px;
+    background-color: rgb(172, 138, 235);
+}
+button:nth-child(20) {
+    font-size: 20px;
+    background-color: rgb(245, 192, 142);
+}
