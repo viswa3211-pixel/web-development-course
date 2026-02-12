@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank App - Part 2</title>
+    <link rel="stylesheet" href="Bank app part-2 (HW).css">
+</head>
+<body>
+
+<div class="bank-app">
+    <h1>Bank App</h1>
+
+    <!-- Balance Section -->
+    <div class="balance-box">
+        <h2>Total Balance</h2>
+        <p id="balance">₹ 0</p>
+    </div>
+
+    <!-- Income & Expense Summary -->
+    <div class="summary">
+        <div class="income-box">
+            <h3>Total Income</h3>
+            <p id="totalIncome">₹ 0</p>
+        </div>
+
+        <div class="expense-box">
+            <h3>Total Expense</h3>
+            <p id="totalExpense">₹ 0</p>
+        </div>
+    </div>
+
+    <!-- Input Section -->
+    <div class="input-box">
+        <label>Description</label>
+        <input type="text" id="description" placeholder="Enter description">
+
+        <label>Amount</label>
+        <input type="number" id="amount" placeholder="Enter amount">
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="credit" onclick="credit()">Credit</button>
+        <button class="debit" onclick="debit()">Debit</button>
+    </div>
+</div>
+
+<script>
+    let totalBalance = 0;
+    let totalIncome = 0;
+    let totalExpense = 0;
+
+    function credit() {
+        let amount = Number(document.getElementById("amount").value);
+
+        if (amount <= 0) return;
+
+        totalBalance += amount;
+        totalIncome += amount;
+
+        document.getElementById("balance").innerText = "₹ " + totalBalance;
+        document.getElementById("totalIncome").innerText = "₹ " + totalIncome;
+
+        document.getElementById("amount").value = "";
+        document.getElementById("description").value = "";
+    }
+
+    function debit() {
+        let amount = Number(document.getElementById("amount").value);
+
+        if (amount <= 0 || amount > totalBalance) {
+            alert("Insufficient Balance!");
+            return;
+        }
+
+        totalBalance -= amount;
+        totalExpense += amount;
+
+        document.getElementById("balance").innerText = "₹ " + totalBalance;
+        document.getElementById("totalExpense").innerText = "₹ " + totalExpense;
+
+        document.getElementById("amount").value = "";
+        document.getElementById("description").value = "";
+    }
+</script>
+
+</body>
+</html>

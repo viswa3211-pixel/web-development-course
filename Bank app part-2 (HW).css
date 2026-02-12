@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.bank-app {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.balance-box {
+    margin-bottom: 20px;
+}
+
+#balance {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c7be5;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.income-box, .expense-box {
+    width: 48%;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.income-box {
+    background: #e6f4ea;
+    color: #2e7d32;
+}
+
+.expense-box {
+    background: #fdecea;
+    color: #c62828;
+}
+
+.input-box {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 12px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2c7be5;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.credit {
+    background-color: #28a745;
+}
+
+.debit {
+    background-color: #dc3545;
+}
+
+button:hover {
+    opacity: 0.9;
+}
